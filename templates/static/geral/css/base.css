@@ -1,0 +1,38 @@
+:root{
+     
+    --main-color: #00CCBE;
+    --dark-color: #09A6A3;
+    --contrast-color: #FFD686;
+
+}
+
+.bg-color-dark{
+
+    background-color: var(--main-color);
+
+}
+
+.p-bold{
+
+    font-weight: bold;
+
+}
+
+.color-dark{
+    color: var(--dark-color);
+}
+
+.timeout-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #f8d7da;
+    color: #721c24;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}

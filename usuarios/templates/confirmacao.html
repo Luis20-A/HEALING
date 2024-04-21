@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'usuarios/css/usuarios.css' %}">
+{% endblock 'head' %}
+
+{% block 'body' %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md d-flex justify-content-center">
+            <div class="cont-cadastro">
+                <br>
+                <br>
+                <section class="cont-logo">
+                    <img class="logo" src="{% static 'geral/img/logo.png' %}">
+                    <label class="text-logo">HEALING</label>
+                </section>
+                <hr>
+                
+                <form action="{% url 'confirmacao' %}" method="POST">{% csrf_token %}
+                    <h2 class="fonte-destaque1">Confirme seu cadastro</h2>  
+                    <br>
+                    <label for="username">Username:</label>
+                    <br>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Digite o seu username" required>
+                    <br>
+                    <label for="code">Código de Confirmação:</label>
+                    <br>
+                    <input type="text" name="code" id="code" class="form-control" placeholder="Digite o codigo de confirmação">
+                    <br>
+                    <input type="submit" value="Confirmar" class="btn btn-success btn-dark-color">
+                    <br>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="col-md bg-main d-flex justify-content-center align-items-center">
+            <img src="{% static 'usuarios/img/ilustracao.png' %}" alt="">
+
+
+        </div>
+    </div>
+</div>
+{% endblock 'body' %}
